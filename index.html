@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: 'Prompt', sans-serif;
-            background: linear-gradient(135deg, #EFCBD2 0%, #B3DBE8 100%);
+            background: linear-gradient(135deg, #FFD1E9 0%, #CDEDFF 100%);
             min-height: 100vh;
         }
         
@@ -48,11 +48,11 @@
 
         /* การ์ดสไตล์ Glass ในโทนสีใหม่ */
         .glass-card {
-            background: rgba(255, 255, 255, 0.75);
+            background: rgba(255, 255, 255, 0.78);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 20px 50px -10px rgba(74, 62, 65, 0.1), 
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 20px 50px -10px rgba(92, 68, 75, 0.08), 
                         inset 0 2px 10px rgba(255, 255, 255, 0.9);
         }
 
@@ -76,26 +76,26 @@
             theme: {
                 extend: {
                     colors: {
-                        pastelPink: '#EFCBD2',
-                        pastelBlue: '#B3DBE8',
+                        pastelPink: '#FFD1E9',
+                        pastelBlue: '#CDEDFF',
                         cream: {
                             50: '#FEFAF9',
                             100: '#F2ECEC',
                             200: '#DBD5D5',
                         },
                         brown: {
-                            300: '#B89EA4',
-                            400: '#8C6F75',
-                            500: '#5A464A',
-                            600: '#3D2F32',
+                            300: '#C49EA8',
+                            400: '#8E6E77',
+                            500: '#5C444B',
+                            600: '#3E2E33',
                         },
                         pink: {
-                            50: '#FEFAF9',
-                            100: '#FDF5F6',
-                            200: '#EFCBD2',
-                            300: '#E2B2BC',
-                            400: '#C98F9B',
-                            500: '#5A464A',
+                            50: '#FFF5F9',
+                            100: '#FFD1E9',
+                            200: '#F7B5D5',
+                            300: '#EE94BF',
+                            400: '#D66D9F',
+                            500: '#5C444B',
                         }
                     }
                 }
@@ -120,7 +120,7 @@
     </div>
 
     <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-brown-500/95 backdrop-blur-sm text-white px-6 py-3 rounded-full shadow-xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none z-50 flex items-center gap-2 font-medium text-sm border border-pink-300">
+    <div id="toast" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-brown-500/95 backdrop-blur-sm text-white px-6 py-3 rounded-full shadow-xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none z-50 flex items-center gap-2 font-medium text-sm border border-pink-200">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5 text-pastelPink">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
@@ -159,16 +159,16 @@
         <div class="glass-card rounded-[40px] p-3 relative z-10">
             
             <svg class="absolute -top-4 -left-2 w-9 h-9 text-pink-300 anim-float-1 z-20 drop-shadow-sm" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-            <svg class="absolute top-[25%] -right-3 w-7 h-7 text-pastelBlue anim-float-2 z-20 drop-shadow-sm" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            <svg class="absolute top-[25%] -right-3 w-7 h-7 text-[#73C3EB] anim-float-2 z-20 drop-shadow-sm" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
             <svg class="absolute bottom-[40%] -left-3 w-5 h-5 text-brown-400 anim-spin z-20 drop-shadow-sm" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
 
             <!-- รูปภาพป้ายสแกนชำระเงิน -->
             <div class="relative p-2 rounded-[36px] z-10">
                 <svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" rx="34" fill="none" stroke="#EFCBD2" stroke-width="2.5" stroke-dasharray="12 12" stroke-linecap="round" class="animate-dash" />
+                    <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" rx="34" fill="none" stroke="#FFD1E9" stroke-width="2.5" stroke-dasharray="12 12" stroke-linecap="round" class="animate-dash" />
                 </svg>
                 <div class="rounded-[28px] overflow-hidden relative shadow-sm border-[4px] border-white">
-                    <img src="line_oa_chat_260802_204100.jpeg" alt="บัญชี hriqzher" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/600x600/EFCBD2/5A464A?text=hriqzher+Payment'">
+                    <img src="line_oa_chat_260802_204100.jpeg" alt="บัญชี hriqzher" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/600x600/FFD1E9/5C444B?text=hriqzher+Payment'">
                 </div>
             </div>
 
@@ -209,7 +209,7 @@
                 <div class="space-y-4">
                     
                     <!-- บัตร Krungthai -->
-                    <div class="virtual-card relative bg-gradient-to-br from-[#74B3C7] to-[#458195] rounded-[24px] p-5 shadow-lg shadow-brown-500/15 overflow-hidden cursor-pointer border border-white/40" onclick="copyText('221-0-72095-8', this, 'kbank')">
+                    <div class="virtual-card relative bg-gradient-to-br from-[#62BBE8] to-[#3A8BB8] rounded-[24px] p-5 shadow-lg shadow-brown-500/15 overflow-hidden cursor-pointer border border-white/40" onclick="copyText('221-0-72095-8', this, 'kbank')">
                         <svg class="absolute -right-6 -bottom-6 w-32 h-32 text-white opacity-10 transform -rotate-12 pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
                         
                         <div class="relative z-10 flex flex-col gap-4">
@@ -230,7 +230,7 @@
                     </div>
 
                     <!-- บัตร TrueMoney -->
-                    <div class="virtual-card relative bg-gradient-to-br from-[#EFCBD2] to-[#C98F9B] rounded-[24px] p-5 shadow-lg shadow-brown-500/15 overflow-hidden cursor-pointer border border-white/50" onclick="copyText('0840683953', this, 'true')">
+                    <div class="virtual-card relative bg-gradient-to-br from-[#FFD1E9] to-[#E592BD] rounded-[24px] p-5 shadow-lg shadow-brown-500/15 overflow-hidden cursor-pointer border border-white/50" onclick="copyText('0840683953', this, 'true')">
                         <svg class="absolute -left-6 -top-6 w-32 h-32 text-white opacity-20 transform rotate-12 pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
 
                         <div class="relative z-10 flex flex-col gap-4">
@@ -251,7 +251,7 @@
                     </div>
 
                     <!-- กล่องเตือน 1 -->
-                    <div class="relative bg-gradient-to-br from-[#FEFAF9] to-[#FDF5F6] rounded-[20px] p-3.5 border-2 border-dashed border-pink-200 shadow-sm z-10 overflow-hidden transform transition-transform hover:scale-[1.02] mt-1">
+                    <div class="relative bg-gradient-to-br from-[#FEFAF9] to-[#FFF5F9] rounded-[20px] p-3.5 border-2 border-dashed border-pink-200 shadow-sm z-10 overflow-hidden transform transition-transform hover:scale-[1.02] mt-1">
                         <svg class="absolute -right-3 -bottom-3 w-14 h-14 text-pink-200/40 transform -rotate-12 pointer-events-none" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
 
                         <div class="flex items-start gap-3 relative z-10">
@@ -294,7 +294,7 @@
                             </svg>
                         </div>
                         <div class="text-[13px] leading-relaxed text-brown-600 font-medium">
-                            <span class="text-brown-600 font-bold">don’t forget slip</span> (แปะสลิปทุกครั้งนะค้า)
+                            <span class="text-brown-600 font-bold">don’t forget slip</span>
                         </div>
                     </div>
 
